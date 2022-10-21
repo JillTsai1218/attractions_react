@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="49" viewBox="0 0 130 49">
+  <g id="Group_592" data-name="Group 592" transform="translate(-150 -492)">
+    <g id="Group_591" data-name="Group 591" transform="translate(-8 -6)">
+      <rect id="Rectangle_153" data-name="Rectangle 153" width="23" height="15" transform="translate(158 514)" fill="#7f1ae9"/>
+      <rect id="Rectangle_154" data-name="Rectangle 154" width="24" height="15" transform="translate(184 514)" fill="#e80a15"/>
+      <rect id="Rectangle_155" data-name="Rectangle 155" width="24" height="15" transform="translate(211 514)" fill="#ed9027"/>
+      <rect id="Rectangle_156" data-name="Rectangle 156" width="24" height="15" transform="translate(238 514)" fill="#eeea39"/>
+      <g id="Group_590" data-name="Group 590">
+        <rect id="Rectangle_157" data-name="Rectangle 157" width="13" height="15" transform="translate(265 514)" fill="#61b12f"/>
+        <path id="Polygon_2" data-name="Polygon 2" d="M10.5,0,21,12H0Z" transform="translate(288 511) rotate(90)" fill="#61b12f"/>
+      </g>
+    </g>
+    <g id="Group_566" data-name="Group 566" transform="translate(166.902 492.317)">
+      <text id="_20" data-name="20" transform="translate(0.098 11.683)" fill="#fff" font-size="11" font-family="PingFangTC-Regular, PingFang TC"><tspan x="0" y="0">20</tspan></text>
+      <text id="_40" data-name="40" transform="translate(26.098 11.683)" fill="#fff" font-size="11" font-family="PingFangTC-Regular, PingFang TC"><tspan x="0" y="0">40</tspan></text>
+      <text id="_60" data-name="60" transform="translate(54.098 11.683)" fill="#fff" font-size="11" font-family="PingFangTC-Regular, PingFang TC"><tspan x="0" y="0">60</tspan></text>
+      <text id="_80" data-name="80" transform="translate(81.098 11.683)" fill="#fff" font-size="11" font-family="PingFangTC-Regular, PingFang TC"><tspan x="0" y="0">80</tspan></text>
+    </g>
+    <text id="_公里_時_" data-name="(公里/時)" transform="translate(214 537)" fill="#fff" font-size="11" font-family="PingFangTC-Regular, PingFang TC"><tspan x="-22" y="0">(公里/時)</tspan></text>
+  </g>
+</svg>

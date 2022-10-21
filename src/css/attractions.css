@@ -1,0 +1,1757 @@
+html,
+body {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  position: relative;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 微軟儷黑體, 微軟正黑體, Arial, Helvetica, Verdana,
+    \5fae\8edf\6b63\9ed1\9ad4, sans-serif, 微軟儷黑體, 微軟正黑體, Arial,
+    Helvetica, Myriad Pro, Microsoft, bauerbodonistd-roman, Century Gothic,
+    "Asap", Futura, "Lucida Grande", Geneva, Helvetica,
+    "sourcehansans-tc-normal", "sans-serif", Tahoma;
+  background-color: #fff;
+  font-size: 18px;
+}
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a:link,
+a:visited,
+a:active {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  border: 0;
+}
+.img {
+  position: relative;
+  line-height: 20px;
+  overflow: hidden;
+}
+.img img {
+  width: 100%;
+}
+a:hover .img_mask {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+input::-ms-clear {
+  display: none;
+}
+a:hover {
+  color: #e62320;
+}
+/*去除input默認樣式*/
+textarea,
+text,
+select,
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: 1px #ff9398 solid;
+}
+/*去除 Chrome focus 時外框*/
+input:focus {
+  outline: 0;
+}
+textarea:focus {
+  outline: 0;
+}
+select:focus {
+  outline: 0;
+}
+html::-webkit-scrollbar {
+  width: 3px;
+  background: #000;
+}
+html::-webkit-scrollbar-track {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  margin: 0;
+  background: #fff;
+}
+/* scrollbar */
+html::-webkit-scrollbar-thumb {
+  /* background: #54a8af; */
+  background: #000000;
+}
+h1,
+h2,
+h3 {
+  padding: 0;
+  margin: 0;
+}
+
+/*list play*/
+.list_play {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url(../images/img_vedio_player_midium_M.svg) no-repeat center
+    center;
+  background-size: 40px;
+}
+@media (max-width: 1023px) {
+  .list_play {
+    background: url(../images/img_vedio_player_midium_M.svg) no-repeat center
+      center;
+    background-size: 30px;
+  }
+}
+/*list play ed*/
+/*文字圖片效果*/
+
+.overlay-color {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  line-height: 0;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: 0.3s linear;
+}
+
+.img:hover .overlay-color,
+a:hover .overlay-color {
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+/*文字圖片效果 ed*/
+
+/* pc & mo */
+.pc {
+  display: block;
+}
+.mo {
+  display: none;
+}
+@media (max-width: 767px) {
+  .pc {
+    display: none;
+  }
+  .mo {
+    display: block;
+  }
+}
+/* pc & mo ed*/
+/*--gotoTop--*/
+
+#back {
+  text-align: center;
+  position: fixed;
+  z-index: 2;
+  right: 20px;
+  bottom: 20px;
+  transition: 0.5s;
+  display: none;
+  cursor: pointer;
+  padding: 0;
+
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+}
+
+#back-img1 {
+  cursor: pointer;
+  width: 40px;
+  display: block;
+}
+
+#back #back-img1 .car {
+  width: 20.43px;
+  margin-bottom: 10px;
+}
+
+#back-img1 img {
+  width: 22.43px;
+  margin-top: 10px;
+}
+/*--gotoTop end--*/
+
+/*框架*/
+
+.frame_box {
+  width: 800px;
+  margin: 0 auto;
+}
+/* @media (max-width: 1080px) {
+  .frame_box {
+    width: 800px;
+    margin: 0 auto;
+  }
+} */
+@media (max-width: 800px) {
+  .frame_box {
+    box-sizing: border-box;
+    /* width: 384px; */
+    width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .frame_box {
+    box-sizing: border-box;
+    width: auto;
+    margin: 0px;
+  }
+}
+
+/* @media (max-width: 767px) {
+  .frame_box {
+    box-sizing: border-box;
+    width: 384px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .frame_box {
+    box-sizing: border-box;
+    width: auto;
+    margin: 0px;
+  } 
+}*/
+/*框架ed*/
+
+/*框架2*/
+.frame_box2 {
+  width: 1375px;
+  width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 1281px) {
+  .frame_box2 {
+    width: 1100px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1100px) {
+  .frame_box2 {
+    width: 1000px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1023px) {
+  .frame_box2 {
+    width: 728px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  .frame_box2 {
+    width: 384px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 640px) {
+  .frame_box2 {
+    box-sizing: border-box;
+    width: auto;
+    margin: 0 15px;
+  }
+}
+/*框架2ed*/
+
+/*框架3*/
+.frame_box3 {
+  width: 1375px;
+  width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 1281px) {
+  .frame_box3 {
+    width: 624px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1100px) {
+  .frame_box3 {
+    width: 624px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1023px) {
+  .frame_box3 {
+    width: 624px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 767px) {
+  .frame_box3 {
+    width: 624px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 640px) {
+  .frame_box3 {
+    box-sizing: border-box;
+    width: auto;
+    margin: 0 15px;
+  }
+}
+/*框架3ed*/
+
+.container {
+  background: #ffffff;
+}
+/*header*/
+/*logo_box*/
+.logo_box {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  padding: 15px 40px;
+  box-sizing: border-box;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.3s;
+}
+.logo_box .logo {
+  width: 112px;
+  height: auto;
+  float: left;
+}
+
+/* 右上角社群icon */
+.logo_box .community {
+  display: flex;
+  align-items: center;
+}
+.logo_box .community a {
+  width: 45px;
+  margin-right: 15px;
+}
+.logo_box .community a:last-child {
+  margin-right: 0;
+}
+
+/* @media (max-width: 767px) { */
+@media (max-width: 768px) {
+  .logo_box {
+    position: absolute;
+    align-items: start;
+    margin-top: 10px;
+  }
+  .logo_box .community a {
+    width: 30px;
+  }
+  .logo_box .community .community_icon {
+    display: none;
+  }
+}
+
+/* 右上角社群icon ed*/
+
+/* 右上角熱門景點*/
+.logo_box .community .attractions {
+  background-color: #fff;
+  margin-right: 15px;
+  border-radius: 5px;
+  padding: 4px;
+}
+.logo_box .community .attractions a {
+  display: flex;
+  align-items: center;
+  /* margin: 0; */
+  padding: 8px;
+  width: 132px;
+  background-color: #fff;
+}
+.logo_box .community .attractions a:hover {
+  color: black;
+}
+.logo_box .community .attractions a .live_div {
+  padding-right: 10px;
+  width: 50px;
+}
+/* @media (max-width: 767px) { */
+@media (max-width: 768px) {
+  .logo_box {
+    position: absolute;
+  }
+  .logo_box .community a {
+    width: 30px;
+  }
+
+  .logo_box .community {
+    margin-top: 105px;
+    /* margin-top: 76px; */
+    /* margin-top: 45px; */
+    margin-right: -15px;
+  }
+
+  .logo_box .community .attractions a {
+    width: 94%;
+    /* width: 96px; */
+    font-size: 15px;
+    padding: 2px 4px;
+  }
+  .logo_box .community .attractions a .live_div {
+    width: 30px;
+    padding-right: 6px;
+  }
+}
+@media (max-width: 767px) {
+  .logo_box .community {
+    /* margin-top: 105px; */
+    /* margin-top: 45px; */
+    /* margin-top: 110px; */
+    margin-top: 76px;
+    margin-right: -15px;
+  }
+}
+/* @media (max-width: 427px) { */
+@media (max-width: 428px) {
+  .logo_box .community {
+    margin-top: 45px;
+  }
+  /* .logo_box .community .attractions a {
+    width: 86%;
+    margin: 5px 5px;
+    font-size: 12px;
+  }
+  .logo_box .community .attractions a .live_div {
+    width: 15px;
+  } */
+}
+
+@media (max-width: 397px) {
+  .logo_box .logo {
+    margin: 0px;
+  }
+  .logo_box .community {
+    /* margin-top: 60px; */
+  }
+  /* .logo_box .community .attractions a {
+    width: 86%;
+    margin: 5px 5px;
+    font-size: 12px;
+  }
+  .logo_box .community .attractions a .live_div {
+    width: 15px;
+  } */
+}
+
+/* 右上角熱門景點 ed*/
+
+/*logo_box ed*/
+
+/*header*/
+header {
+}
+header .bg {
+  background: url(../images/旅遊景點背景.svg) top no-repeat;
+  width: 100%;
+  /* height: 550px; */
+  height: 420px;
+  background-size: cover;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+}
+
+header .contxt {
+  width: auto;
+  margin: 0 auto;
+}
+header .title {
+  color: #000000;
+  text-align: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: relative;
+  font-weight: normal;
+  padding: 20px 50px;
+}
+
+header .title img {
+  /* 攝影機圖片 */
+  position: absolute;
+  width: 174.23px;
+  top: -60px;
+  right: -30px;
+}
+
+header .contxt .title h1 {
+  font-size: 50px;
+  font-weight: normal;
+}
+header .contxt .title h1 span {
+  font-size: 66px;
+  display: block;
+}
+
+@media (max-width: 1023px) {
+  header .logo {
+    width: 120px;
+    height: auto;
+  }
+
+  header .title {
+    /* background-color: rgba(0, 0, 0, 0.3); */
+    margin-left: -4%;
+    position: relative;
+  }
+  header .title img {
+    /* 攝影機圖片 */
+    position: absolute;
+    width: 144.23px;
+    top: -45px;
+    left: 83.5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo_box {
+    padding: 0px 10px;
+  }
+  header .logo {
+    width: 90px;
+    height: auto;
+    margin: 10px;
+  }
+  header .contxt {
+    width: auto;
+    margin: 0 15px;
+    margin-top: 50px; /*標題上下置中*/
+    font-size: 36px;
+  }
+  header .bg {
+    /* 本來手機版主視覺變換是在這 */
+    /* background: url(../images/旅遊景點背景.svg) center no-repeat; */
+    background: url(../images/旅遊景點背景pad.svg) center no-repeat;
+    /* background: url(../images/旅遊景點-手機版.svg) center no-repeat; */
+    overflow: hidden;
+    background-size: auto;
+    height: 170px;
+    /* height: 300px; */
+    /* height: 100px; */
+    display: block;
+  }
+  .logo img {
+    width: 60px;
+  }
+
+  header .contxt .title h1 {
+    font-size: 40px;
+    /* text-shadow: rgb(0 0 0 / 80%) 0 0 8px; */
+  }
+  header .contxt .title h1 span {
+    font-size: 40px;
+    display: inline-block;
+  }
+
+  header .title {
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0 auto;
+    padding: 10px;
+    align-items: center;
+    position: relative;
+  }
+  header .title img {
+    /* 攝影機圖片 */
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  header .logo {
+    width: 90px;
+    height: auto;
+    margin: 10px;
+  }
+  header .contxt {
+    width: auto;
+    margin: 0 15px;
+    /* margin-top: 45px; 標題上下置中 */
+    margin-top: 20px;
+  }
+
+  .logo img {
+    width: 60px;
+  }
+  header .bg {
+    /* height: 170px; */
+    height: 130px;
+  }
+  header .contxt .title h1 {
+    font-size: 22px;
+  }
+  header .contxt .title h1 span {
+    font-size: 22px;
+  }
+  header .title {
+    background-color: rgba(0, 0, 0, 0);
+    margin: 0 auto;
+    padding: 0;
+    align-items: center;
+    width: auto;
+    height: auto;
+    position: relative;
+  }
+  header .title img {
+    /* 攝影機圖片 */
+    display: none;
+  }
+}
+/* @media (max-width: 427px) { */
+@media (max-width: 428px) {
+  header .bg {
+    /* background: url(../images/旅遊景點背景.svg) center no-repeat; */
+    background: url(../images/旅遊景點-手機版.svg) center no-repeat;
+    overflow: hidden;
+    background-size: auto;
+    /* height: 170px; */
+    height: 100px;
+    display: block;
+  }
+}
+@media (max-width: 361px) {
+  header .logo {
+    width: 70px;
+    height: auto;
+  }
+
+  header .title {
+  }
+  header .title img {
+    /* 攝影機圖片 */
+    display: none;
+  }
+}
+
+/*header end*/
+
+/*freeway_video影片區塊*/
+article .map_bg .frame_box .freeway_video {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 800px;
+  /* height: 450px; */
+  overflow: hidden;
+}
+article .map_bg .frame_box .freeway_video iframe {
+  width: 100%;
+  height: 450px;
+  border-radius: 15px;
+}
+article .map_bg .frame_box .freeway_video img {
+  margin-top: 44px;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 15px;
+}
+article .map_bg .frame_box .freeway_video .freeway_video_txt {
+  text-align: left;
+  background-color: #ffffff;
+  padding: 10px 0 30px 0;
+  display: flex;
+  justify-content: space-between;
+}
+article .map_bg .frame_box .freeway_video .freeway_video_txt .txt_left {
+  /* font-size: 20px; */
+  font-size: 14px;
+}
+
+article .map_bg .frame_box .freeway_video .freeway_video_txt .source {
+  color: #888888;
+  font-size: 14px;
+}
+.video_fix {
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  display: none;
+  width: 100%;
+}
+
+@media (max-width: 1134px) {
+  article .map_bg .frame_box .freeway_video {
+    /* margin: 0 auto; */
+    /* width: 500px; */
+    overflow: hidden;
+  }
+}
+@media (max-width: 1023px) {
+  article .map_bg .frame_box .freeway_video {
+    /* margin: 0 auto; */
+  }
+  article .map_bg .frame_box .freeway_video img {
+    margin-top: 44px;
+  }
+}
+@media (max-width: 800px) {
+  article .map_bg .frame_box .freeway_video {
+    width: 600px;
+  }
+  article .map_bg .frame_box .freeway_video iframe {
+    height: 337.5px;
+  }
+}
+@media (max-width: 767px) {
+  article .map_bg .frame_box .freeway_video {
+    margin-left: -25%;
+    margin: 0;
+    display: block;
+    width: 100%;
+    z-index: 3;
+  }
+
+  article .map_bg .frame_box .freeway_video .img {
+    width: 30%;
+  }
+  article .map_bg .frame_box .freeway_video img {
+    margin-top: 0px;
+  }
+  article .map_bg .frame_box .freeway_video .freeway_video_txt {
+    margin: auto;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 641px) {
+  article .map_bg .frame_box .freeway_video .freeway_video_txt {
+    display: block;
+    padding: 10px;
+  }
+  article .map_bg .frame_box .freeway_video img {
+    border-radius: 0px;
+    border-top: 3px solid #000;
+    border-bottom: 3px solid #000;
+  }
+  article .map_bg .frame_box .freeway_video .freeway_video_txt .txt_left {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  article .map_bg .frame_box .freeway_video {
+    width: auto;
+    /* height: 200px; */
+  }
+  /* article .map_bg .frame_box .freeway_video iframe {
+  height: 240px;
+  }  */
+}
+
+@media (max-width: 500px) {
+  article .map_bg .frame_box .freeway_video iframe {
+    height: 320px;
+    border-radius: 0px;
+  }
+  article .map_bg .frame_box .freeway_video .freeway_video_txt .txt_left {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 416px) {
+  article .map_bg .frame_box .freeway_video iframe {
+    height: 240px;
+  }
+}
+
+@media (max-width: 361px) {
+  article .map_bg .frame_box .freeway_video {
+    display: block;
+    margin: auto;
+    width: 100%;
+  }
+  article .map_bg .frame_box .freeway_video img {
+    margin-top: 0px;
+  }
+  article .map_bg .frame_box .freeway_video .freeway_video_txt {
+    margin: auto;
+    font-size: 12px;
+  }
+}
+.video_box {
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+@media (max-width: 800px) {
+  .video_box {
+    height: 338px;
+  }
+}
+@media (max-width: 500px) {
+  .video_box {
+    height: 281px;
+  }
+}
+@media (max-width: 412px) {
+  .video_box {
+    height: 233px;
+  }
+}
+@media (max-width: 375px) {
+  .video_box {
+    height: 211px;
+  }
+}
+@media (max-width: 360px) {
+  .video_box {
+    height: 203px;
+  }
+}
+@media (max-width: 320px) {
+  .video_box {
+    height: 180px;
+  }
+}
+/*freeway_video影片區塊 END*/
+
+/* 路段選擇區塊&圖片速度條 */
+article {
+  text-align: center;
+}
+
+.area_box {
+  width: 190px;
+  height: 145px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    #ffffff 0%,
+    #ffffff 32%,
+    #dddddd 65%,
+    #b5b5b5 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    #ffffff 0%,
+    #ffffff 32%,
+    #dddddd 65%,
+    #b5b5b5 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #ffffff 32%,
+    #dddddd 65%,
+    #b5b5b5 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#b5b5b5',GradientType=0 );
+}
+.area_box a:hover {
+  color: #000000;
+}
+
+.speedbar {
+  margin: 15px 0;
+}
+
+.speedbar img {
+  width: 130px;
+}
+.choose_area {
+  background-color: #f0f0f0;
+  /* padding: 56px; */
+  padding-bottom: 56px;
+}
+/* .frame_box {
+  background-color: #F0F0F0;
+  } */
+@media (max-width: 1080px) {
+  .area_box {
+    width: 45%;
+    height: 160px;
+  }
+}
+@media (max-width: 767px) {
+  .choose_area {
+    position: unset;
+    margin: 0 auto;
+    padding: 0px 10px;
+    /* padding-bottom: 56px; */
+  }
+  .area_box {
+    z-index: 0;
+  }
+}
+
+/* @media (max-width: 414px) { */
+@media (max-width: 640px) {
+  .area_box {
+    z-index: 0;
+  }
+}
+/* @media (max-width: 376px) { */
+@media (max-width: 380px) {
+  .area_box {
+    height: 145px;
+  }
+}
+@media (max-width: 361px) {
+  .area_box {
+    height: 145px;
+  }
+}
+@media (max-width: 321px) {
+  /* @media (max-width: 359px) { */
+  .area_box {
+    height: 145px;
+  }
+}
+@media (max-width: 281px) {
+  /* @media (max-width: 359px) { */
+  .area_box {
+    height: 145px;
+  }
+}
+/* 路段選擇區塊&圖片速度條 END */
+
+/* KM數 與 速度條數值 */
+.information {
+  display: flex;
+}
+.information h5 {
+  display: block;
+  margin: 5px 10px 0px 0px;
+}
+.km {
+  /* padding:2px 0px; */
+  font-size: 16px;
+}
+.speed {
+  background-color: #61b12f;
+  border-radius: 3px;
+  padding: 2px 10px;
+  font-size: 15px;
+}
+.red {
+  background-color: #e80a15;
+  color: #ffffff;
+}
+.yellow {
+  background-color: #eeea39;
+}
+.purple {
+  background-color: #7f1ae9;
+  color: #ffffff;
+}
+.orange {
+  background-color: #ed9027;
+}
+.black {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* KM數 與 速度條數值 END */
+
+/* 立即更新按鈕 */
+.refresh_btn {
+  margin-top: -20px;
+}
+.refresh_btn a {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 6px 9px;
+  font-size: 12px;
+  /* display: inline-block; */
+  margin-top: -10px;
+  margin-right: 5px;
+}
+.refresh_btn a:hover {
+  color: #000000;
+}
+
+#refresh img {
+  width: 16px;
+  vertical-align: text-bottom;
+}
+#refresh p {
+}
+
+@media (max-width: 767px) {
+  .refresh_btn {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 416px) {
+  .refresh_btn {
+    margin-top: 20px;
+  }
+  .refresh_btn a {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 6px 9px;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-right: 5px;
+  }
+
+  #refresh img {
+    width: 16px;
+    vertical-align: text-bottom;
+  }
+}
+@media (max-width: 361px) {
+  /* @media (max-width: 359px) { */
+
+  .refresh_btn {
+    margin-top: 20px;
+    width: 120px;
+    text-align: right;
+  }
+  .refresh_btn a {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 6px 9px;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-right: 5px;
+  }
+
+  #refresh img {
+    width: 16px;
+    vertical-align: text-bottom;
+  }
+  .km {
+    padding: 2px 0px;
+    font-size: 14px;
+  }
+  .speed {
+    font-size: 14px;
+  }
+}
+
+/* 立即更新按鈕 END */
+
+/* 國道圖&方向文字&起點終點文字 */
+.choose_area ul {
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.choose_area li {
+  position: relative;
+}
+.choose_area .child_clone {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 10px;
+  background-color: #fff;
+}
+
+.road_direction {
+  margin-top: 19px;
+  display: flex;
+  justify-content: center;
+  height: 31.34px;
+  line-height: 31.34px;
+}
+.road_direction img {
+  width: 40.1px;
+}
+.area_box.road_direction img {
+  vertical-align: text-bottom;
+}
+.area_box h2 {
+  font-size: 20px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+/* 國道圖&方向文字&起點終點文字END */
+
+/* 路段box向下箭頭 */
+.aw img {
+  width: 18px;
+  margin-top: 14.5px;
+}
+/* 路段box向下箭頭 end */
+
+/* 點擊路段box效果 */
+.reverse {
+  transform: rotateX(180deg);
+  margin-top: 10px;
+}
+.click_child {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+.now_choose {
+  z-index: 2;
+}
+
+/* 點擊路段box效果 end */
+
+/* 給路段欄 對位置用 */
+.area_box .area_detail {
+  position: relative;
+}
+/* 給路段欄 對位置用 end */
+
+/* 國道box點擊後 展開的路段選擇框 */
+.choose_area ul li .area_detail .child {
+  width: 330px;
+  /* height: 195px; */
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 6px #00000065;
+  position: absolute;
+
+  top: 130px;
+  left: -80px;
+  z-index: 1;
+  display: none;
+  box-sizing: border-box;
+}
+.choose_area ul li .area_detail .child {
+  width: 330px;
+  /* height: 195px; */
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 6px #00000065;
+  position: absolute;
+
+  top: 130px;
+  left: -80px;
+  z-index: 1;
+  display: none;
+  box-sizing: border-box;
+}
+
+.child ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: inherit;
+  padding-top: 15px;
+}
+.child ul li {
+}
+.sub_active {
+  background-color: #000000;
+  color: #ffffff !important;
+}
+.child a {
+  border: 1px solid#000000;
+  border-radius: 3px;
+  display: block;
+  line-height: 32px;
+  width: 78px;
+  height: 32px;
+  font-size: 16px;
+  /* margin: 15px 0px 15px 23px; */
+  margin: 0px 0px 15px 23px;
+}
+
+@media (max-width: 769px) {
+  .child ul {
+    padding-top: 10px;
+  }
+  .child ul li {
+    margin-left: 10px;
+  }
+  .child a {
+    font-size: 16px;
+    margin: 0px auto 10px auto;
+    margin: 0px 0px 10px 13px;
+  }
+  .area_box h2 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .choose_area ul li .area_detail .child {
+    width: 100vw;
+    width: 90vw;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 6px #00000065;
+    position: absolute;
+    top: auto;
+    left: auto;
+    z-index: 1;
+  }
+  .choose_area ul li:nth-child(2n) .area_detail .child {
+    width: 90vw;
+    top: auto;
+    right: 0;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 561px) {
+  .choose_area ul li .area_detail .child {
+    width: 85vw;
+    top: 130px;
+    left: 0px;
+    z-index: 1;
+  }
+  .choose_area ul li:nth-child(2n) .area_detail .child {
+    width: 85vw;
+
+    /* right: 0px; */
+    position: absolute;
+    right: 0px;
+    /* left:auto; */
+    z-index: 1;
+  }
+}
+@media (max-width: 487px) {
+  .choose_area ul li:nth-child(2n) .area_detail .child {
+    left: -116%;
+  }
+}
+
+@media (max-width: 477px) {
+  .choose_area ul li:nth-child(2n) .area_detail .child {
+    left: -110%;
+  }
+}
+@media (max-width: 435px) {
+  .choose_area ul li:nth-child(2n) .area_detail .child {
+    left: -94%;
+  }
+}
+@media (max-width: 427px) {
+  .choose_area ul li:nth-child(2n) .area_detail .child {
+    left: -90%;
+  }
+}
+
+@media (max-width: 640px) {
+  .choose_area ul li .area_detail .child {
+    width: 100vw;
+    width: 90vw;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 6px #00000065;
+    position: absolute;
+    top: auto;
+    left: auto;
+    z-index: 1;
+    padding-left: 10px;
+  }
+  .choose_area ul li:nth-child(2n) .area_detail .child {
+    width: 90vw;
+    top: auto;
+    left: auto;
+    z-index: 1;
+  }
+
+  .child ul {
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+    justify-content: flex-start;
+    /* margin: 10px auto; */
+    margin: 10px auto 0 auto;
+  }
+  .child ul li {
+    margin-left: 10px;
+    margin-left: 0px;
+    /* width: calc((100%)/2); */
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .child ul li:last-child {
+    /* margin-right: 0px; */
+  }
+  .child a {
+    font-size: 16px;
+    margin: 0px 0px 10px 10px;
+    margin: 0px;
+    /* width: calc((100%-20px)/3); */
+  }
+}
+@media (max-width: 361px) {
+  /* @media (max-width: 359px) { */
+
+  /* child選單(奇數跟偶數) */
+  .choose_area ul li .area_detail .child {
+    width: 90vw;
+    z-index: 1;
+  }
+  .choose_area ul li:nth-child(2n) .area_detail .child {
+    z-index: 1;
+  }
+  .child ul {
+  }
+  .child ul li {
+    /* margin-left: 10px; */
+  }
+  .child a {
+  }
+}
+@media (max-width: 328px) {
+  /* child選單(奇數跟偶數) */
+  .choose_area ul li .area_detail .child {
+    width: 90vw;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 6px #00000065;
+    position: absolute;
+    z-index: 1;
+  }
+  .choose_area ul li:nth-child(2n) .area_detail .child {
+    z-index: 1;
+  }
+}
+
+/* 國道box點擊後 展開的路段選擇框 end */
+
+.attractions_area {
+  /* background: url(../images/map_bg.jpg) repeat-y center; */
+  /* background-size: cover; */
+  background-color: #f0f0f0;
+}
+@media (max-width: 1134px) {
+  .map_bg {
+    height: auto;
+  }
+}
+
+@media (max-width: 1023px) {
+}
+
+/*資料來源文字*/
+.source_name p {
+  color: #ffffff;
+  font: normal normal normal 13px/20px PingFang TC;
+  /* letter-spacing: 0px; */
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+/*資料來源文字 END*/
+
+/*議題包上面 標題區塊*/
+.issue_area {
+  margin-top: 30px;
+}
+.issue_list {
+  margin-bottom: 66px;
+}
+.suggest_title {
+  color: #adadad;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+.issue_title {
+  font-size: 24px;
+  position: relative;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.issue_title p {
+  display: inline-block;
+  border-bottom: #000 1px solid;
+  padding-bottom: 8px;
+}
+@media (max-width: 767px) {
+  .issue_area {
+    margin-top: 15px;
+  }
+  .suggest_title {
+    font-size: 25px;
+    margin-bottom: 15px;
+  }
+}
+/*議題包上面 標題區塊 end*/
+
+/* 議題包時間 */
+.time {
+  background-size: 13px;
+  font-size: 14px;
+  padding-bottom: 8px;
+  color: #686868;
+  float: left;
+  margin-bottom: 15px;
+}
+/* 議題包時間ed */
+
+/*議題包三欄*/
+.issue_news {
+  overflow: hidden;
+}
+.issue_news .list {
+}
+.issue_news .box {
+}
+.issue_news .list ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: top;
+}
+.issue_news .list li {
+  list-style: none;
+  /* width: calc((100% - 125px) / 3); */
+  width: calc((100% - 120px) / 3);
+  overflow: hidden;
+  margin-right: 60px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.issue_news .list li:nth-child(3n) {
+  margin-right: 0px;
+}
+.issue_news .list .img {
+  width: 100%;
+  height: 202px; /*設計稿204 chrome計算的高202*/
+  position: relative;
+  overflow: hidden;
+  line-height: 0;
+  margin-bottom: 5px;
+}
+.issue_news .list .img img {
+  width: 100%;
+}
+.issue_news .list .txt_box {
+  overflow: hidden;
+}
+.issue_news .list h2 {
+  font-weight: bold;
+}
+.issue_news .list .txt {
+  width: auto;
+  text-align: left;
+  margin-bottom: 10px;
+  line-height: 26px;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  font-size: 18px;
+}
+.issue_news .list .type {
+  position: relative;
+  font-size: 14px;
+  padding: 2px 15px;
+  border: #000 1px solid;
+  border-radius: 4px;
+}
+.issue_news .list a:hover .type {
+  color: #000;
+}
+.issue_news .list .time {
+  margin-top: 5px;
+  padding-bottom: 0;
+}
+.issue_news .list .small {
+  font-size: 14px;
+  color: #7f7f7f;
+  text-align: right;
+}
+@media (max-width: 1279px) {
+  .issue_news .list li {
+    list-style: none;
+    width: calc((100% - 65px) / 2);
+    overflow: hidden;
+    margin-right: 60px;
+  }
+  .issue_news .list li:nth-child(3n) {
+    margin-right: 60px;
+  }
+  .issue_news .list li:nth-child(even) {
+    margin-right: 0px;
+  }
+  .issue_news .list li .img {
+    height: 291px;
+  }
+  .issue_news .list .txt,
+  .news_now .list .txt {
+    font-size: 16px;
+    line-height: 25px;
+    height: 45px;
+  }
+  .time {
+    font-size: 12px;
+  }
+  .title_line p {
+    font-size: 18px;
+    margin-bottom: 3px;
+  }
+}
+@media (max-width: 1023px) {
+  .issue_news .list li .img {
+    height: 186px;
+  }
+}
+@media (max-width: 767px) {
+  .issue_news .list .box {
+    display: flex;
+    align-items: center;
+  }
+  .issue_news .list li {
+    list-style: none;
+    width: 100%;
+    overflow: hidden;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  .issue_news .list li {
+    width: 100%;
+    overflow: hidden;
+    margin-right: 0px;
+    margin-bottom: 15px;
+  }
+  .issue_news .list li .box {
+    display: flex;
+  }
+  .issue_news .list li:nth-child(3n) {
+    margin-right: 0;
+  }
+  .issue_news .list li .img {
+    width: 41%;
+    height: 83px;
+    /* width: 38%;
+    height: 79px; */
+  }
+  .issue_news .list .txt_box {
+    width: 60%;
+    margin: 0 10px;
+    overflow: hidden;
+    padding: 0;
+  }
+  .issue_news .list .txt {
+    margin-bottom: 5px;
+    font-size: 18px;
+    line-height: 20px;
+    height: 40px;
+  }
+
+  .issue_news .list .time {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  /*.title_line p{margin-bottom:4px}*/
+}
+@media (max-width: 412px) {
+  .issue_news .list li .img {
+    height: 72px;
+  }
+  .article_rank .list .txt {
+    line-height: 22px;
+  }
+  .issue_news .list .time {
+    margin-top: 2px;
+  }
+  .issue_news .list .type {
+    bottom: 5px;
+  }
+}
+@media (max-width: 374px) {
+  .issue_news .list li .img {
+    height: 68px;
+  }
+  .issue_news .list .time {
+    font-size: 10px;
+  }
+  .issue_news .list .type {
+    font-size: 10px;
+    padding: 0px 4px;
+    bottom: 3px;
+  }
+  .issue_news .list .txt {
+    font-size: 15px;
+    line-height: 19px;
+    margin-top: 3px;
+  }
+  .article_rank .list .txt {
+    font-size: 15px;
+    line-height: 19px;
+    height: 40px;
+  }
+}
+@media (max-width: 359px) {
+  .issue_news .list li .img {
+    width: 37%;
+    height: 58px;
+  }
+  .issue_news .list .txt {
+    font-size: 15px;
+    line-height: 19px;
+    margin-top: 3px;
+    margin-bottom: 0;
+  }
+}
+
+/* 議題包三欄ed*/
+
+/* 看更多btn */
+.more {
+  margin-top: 30px;
+}
+.more a {
+  border: 1px solid #000000;
+  border-radius: 25px;
+  padding: 10.5px 27px;
+  font-size: 16px;
+}
+.more a:hover {
+  color: #000000;
+}
+
+.more img {
+  width: 5.32px;
+  height: 9.47px;
+  vertical-align: baseline;
+}
+/* 看更多btn end*/
+
+/*footer*/
+footer {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #000000;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+footer h6 {
+  text-align: center;
+  font: normal normal normal 16px/24px PingFang TC;
+  color: #888888;
+}
+footer .frame_box .community {
+  display: none;
+}
+@media (max-width: 767px) {
+  footer .frame_box .community {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  footer .frame_box .community a {
+    margin-right: 15px;
+  }
+
+  footer .frame_box .community a:last-child {
+    margin-right: 0;
+  }
+}
+/*footer ed*/
+
+/* 景點頁css */
+
+.attractions_area {
+  /* margin: 128px auto 56px auto; */
+}
+.attractions_area .frame_box3 {
+  /* margin: 128px auto 56px auto; */
+  /* padding:128px auto 56px auto; */
+}
+.attractions_area .frame_box3 .choose_area .triangle {
+  /* margin-bottom: 40px; */
+}
+.attractions_area .frame_box3 .choose_area .triangle .triangle_img {
+  background: url(../images/倒三角形.svg) no-repeat center center;
+  width: 260px;
+  height: 88px;
+  margin: 0 auto;
+  position: relative;
+}
+.attractions_area .frame_box3 .choose_area .triangle .triangle_img p {
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.attractions_area .frame_box3 .choose_area .triangle img {
+  margin-top: 8px;
+  width: 23px;
+  /* position: absolute; */
+}
+
+.attractions_area .frame_box3 .choose_area .attractions_box {
+  width: 220px;
+  margin-top: 40px;
+}
+
+.active {
+  color: red;
+}
+
+.attractions_area .frame_box3 .choose_area .attractions_box a .attractions_img {
+  width: 100%;
+}
+
+.attractions_area
+  .frame_box3
+  .choose_area
+  .attractions_box
+  a
+  .attractions_img
+  img {
+  border-radius: 6px;
+}
+.attractions_area .frame_box3 .choose_area .attractions_box .attractions_txt {
+  /* font-size: 12px; */
+  font-size: 10px;
+  text-align: left;
+  margin-top: 5px;
+}
+
+.attractions_pc {
+  display: block;
+}
+
+.attractions_mo {
+  display: none;
+}
+
+@media (max-width: 641px) {
+  .triangle {
+    /* padding-bottom: 15px; */
+  }
+  /* .attractions_pc {
+    display: none;
+  } */
+  /* new */
+  .attractions_pc {
+    overflow-y: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+  .choose_area ul {
+    flex-wrap: nowrap;
+    /* gap: 0 20px; */
+    justify-content: flex-start;
+    margin-bottom: 50px;
+    align-items: flex-start;
+  }
+  .choose_area ul li {
+    margin-right: 25px;
+  }
+  .choose_area ul li:nth-child(10n) {
+    margin-right: 0px;
+  }
+  .attractions_area .frame_box3 .choose_area .attractions_box {
+    width: 55%;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    margin-top: 15px;
+  }
+}
