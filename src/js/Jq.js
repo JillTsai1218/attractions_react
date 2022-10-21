@@ -74,14 +74,19 @@ $(function() {
   //螢幕width改變 重新reload頁面
 
 //手機版 隨著捲動，影片往上蓋過上面banner區塊，並fix在上面
-var $fv=$('.freeway_video').offset().top;
-var freeway_video_c=$('.freeway_video').clone();
-$('.video_fix .frame_box').append(freeway_video_c);
+let y=0;
+if(y===0){
+    var fv=$('.freeway_video').offset().top;
+    var freeway_video_c=$('.need_to_copy').html();
+    $('.video_fix .frame_box').html(freeway_video_c);
+    y++;
+}
+
 
 function video_scroll(){
     $(window).scroll(function(){    
         if ($(window).width() < 500) {   
-            if($(window).scrollTop() > $fv){
+            if($(window).scrollTop() > fv){
                 $('.video_fix').show();      
             }else{
                 $('.video_fix').hide();

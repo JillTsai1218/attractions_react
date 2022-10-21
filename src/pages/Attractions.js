@@ -62,7 +62,7 @@ function AttractionsIndex() {
 <article>
     <div class="map_bg">
         <div class="video_fix"><div class="frame_box"></div></div>
-            <div class="frame_box">  
+            <div class="frame_box need_to_copy">  
                 <div class="freeway_video">
 
                     <iframe src="https://www.youtube.com/embed/MnODaP-1JaE" frameborder="0"></iframe>
