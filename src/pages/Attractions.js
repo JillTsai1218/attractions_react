@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 // import Header from './../header';
 // import {Helmet} from "react-helmet";
-// import Myjs from './../Myjs';
+ import Jq from './../js/Jq';
 // import gotop from './../images/gotop.png';
 // import ad_top from './../images/ad970x90.jpg';
 // import ad_top_m from './../images/ad320x100.jpg';
@@ -24,6 +24,7 @@ function AttractionsIndex() {
 
   return (
 <>
+<Jq />
 <div class="child_box"></div>
 <div id="back"> 
 <div id="back-img1"><img src="images/箭頭上-1.svg" alt="top"/><img class="car" src="images/Icon awesome-car-alt.svg" alt="top"/></div>
