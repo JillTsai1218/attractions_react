@@ -23,7 +23,7 @@ import React, { useState, useEffect } from 'react'
 // import { DFPSlotsProvider, AdSlot } from 'react-dfp';
 import './../css/attractions.css';
 const data = require('./../json/attractions.json'); 
-
+const issue_data=data.issue;
 
 function AttractionsIndex() {
     // const [loading, setLoading] = useState('')
@@ -142,13 +142,30 @@ function AttractionsIndex() {
     <div className="issue_area">
         <div className="frame_box2">
         <div className="suggest_title"><p>推薦給您</p></div>
+        {Array.from(issue_data).map((item, index) => (
         <div className="issue_list">
-            <div className="issue_title"><p>車壇報好康</p></div>
+            <div className="issue_title"><p>{item[0].issue_name}</p></div>
 
             <div className="issue_news">
             <div className="list">
                 <ul>
+                {Array.from(item).map((item2, index2) => (
                     <li>
+                        <a href={item2.pack_url}>				
+                        <div className="box">
+                        <div className="img">
+                       {item2.pack_play_icon==="0"?``:<div className="list_play"></div>} 
+                        <div className="overlay-color"></div><img src={item2.pack_pic_url}/>
+                        </div>
+                        <div className="txt_box">
+                            <h3 className="txt">{item2.pack_title}</h3>
+                            <div className="time">{item2.pack_published_date}</div>
+                        </div>
+                        </div>
+                        </a>
+                    </li>
+                    ))}
+                    {/* <li>
                         <a href="#">				
                         <div className="box">
                         <div className="img">
@@ -156,14 +173,14 @@ function AttractionsIndex() {
                         <div className="overlay-color"></div><img src="images/20201106102127-3498d9ee.jpg"/>
                         </div>
                         <div className="txt_box">
-                            <h3 className="txt">秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響</h3>
+                            <h3 className="txt">{item[index].pack_title}</h3>
                             <div className="time">1 分鐘前</div>
                         </div>
                         </div>
                         </a>
-                    </li>
+                    </li> */}
         
-                    <li>
+                    {/* <li>
                         <a href="#">
                         <div className="box">
                         <div className="img">
@@ -232,17 +249,18 @@ function AttractionsIndex() {
                         </div>
                         </div>
                         </a>
-                    </li>
+                    </li> */}
 
                 </ul>
             </div>	
             </div>
             
             <div className="more">
-                <a href="##"><img src={arrow_right} alt=""/><span>&nbsp;&nbsp;看更多</span></a>
+                <a href={`https://news.tvbs.com.tw/pack/packdetail/`+item[0].issue_db_id}><img src={arrow_right} alt=""/><span>&nbsp;&nbsp;看更多</span></a>
             </div>
         </div> 
-         <div className="issue_list">
+        ))}
+         {/* <div className="issue_list">
             <div className="issue_title"><p>電動車新紀元</p></div>
 
             <div className="issue_news">
@@ -341,7 +359,7 @@ function AttractionsIndex() {
             <div className="more">
                 <a href="##"><img src={arrow_right} alt=""/><span>&nbsp;&nbsp;看更多</span></a>
             </div>
-        </div>
+        </div> */}
     </div>
     </div>
 </article>
