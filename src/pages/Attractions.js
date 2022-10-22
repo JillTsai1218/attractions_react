@@ -2,6 +2,12 @@ import React, { useState, useEffect } from 'react'
 // import Header from './../header';
 // import {Helmet} from "react-helmet";
  import Jq from './../js/Jq';
+ import tvbs_black  from  './../images/tvbs_black.svg';
+ import live  from  './../images/LIVE.svg';
+ import fb_black  from  './../images/facebook_black.svg';
+ import line_black  from  './../images/line_black.svg';
+ import arrow_top  from  './../images/箭頭上-1.svg';
+ import car  from  './../images/Icon awesome-car-alt.svg';
 // import gotop from './../images/gotop.png';
 // import ad_top from './../images/ad970x90.jpg';
 // import ad_top_m from './../images/ad320x100.jpg';
@@ -27,24 +33,24 @@ function AttractionsIndex() {
 <Jq />
 <div class="child_box"></div>
 <div id="back"> 
-<div id="back-img1"><img src="images/箭頭上-1.svg" alt="top"/><img class="car" src="images/Icon awesome-car-alt.svg" alt="top"/></div>
+<div id="back-img1"><img src={arrow_top} alt="top"/><img class="car" src={car} alt="top"/></div>
 </div>
 <div class="container">
 <header>
     <div class="bg">
         <div class="logo_box">
-            <div class="logo"><a href="https://news.tvbs.com.tw/" rel="noopener noreferrer" target="_blank"><img src="images/tvbs_black.svg" alt="logo"/></a></div>
+            <div class="logo"><a href="https://news.tvbs.com.tw/" rel="noopener noreferrer" target="_blank"><img src={tvbs_black} alt="logo"/></a></div>
            <div class="community">
                <div class="attractions">
                    <a href="##" >
                        <div class="live_div">
-                           <img src="images/LIVE.svg" alt="top"/>
+                           <img src={live} alt="top"/>
                        </div>
                        <span>國道路況</span>
                    </a>
                 </div>    
-               <a class="community_icon" href="https://www.facebook.com/sharer/sharer.php?u=網址"><img src="images/facebook_black.svg" alt="top"/></a>
-               <a class="community_icon"  href="https://social-plugins.line.me/lineit/share?text=標題&url=網址"><img src="images/line_black.svg" alt="top"/></a>
+               <a class="community_icon" href="https://www.facebook.com/sharer/sharer.php?u=網址"><img src={fb_black} alt="top"/></a>
+               <a class="community_icon"  href="https://social-plugins.line.me/lineit/share?text=標題&url=網址"><img src={line_black} alt="top"/></a>
             </div>  
         </div>     
         <div class="contxt scroll1">
@@ -420,8 +426,8 @@ function AttractionsIndex() {
 <footer>
     <div class="frame_box">
         <div class="community"> 
-            <a class="community_icon" href="https://www.facebook.com/sharer/sharer.php?u=網址"><img src="images/facebook_black.svg" alt="top"/></a>
-            <a class="community_icon"  href="https://social-plugins.line.me/lineit/share?text=標題&url=網址"><img src="images/line_black.svg" alt="top"/></a>
+            <a class="community_icon" href="https://www.facebook.com/sharer/sharer.php?u=網址"><img src={fb_black} alt="top"/></a>
+            <a class="community_icon"  href="https://social-plugins.line.me/lineit/share?text=標題&url=網址"><img src={line_black} alt="top"/></a>
          </div>  
 
         <h6> © TVBS Media Inc. All Rights Reserved.<br/>台北市內湖區瑞光路451號 | 聯利媒體股份有限公司 </h6>
