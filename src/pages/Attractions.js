@@ -8,6 +8,7 @@ import React, { useState, useEffect } from 'react'
  import line_black  from  './../images/line_black.svg';
  import arrow_top  from  './../images/箭頭上-1.svg';
  import car  from  './../images/Icon awesome-car-alt.svg';
+ import arrow_right  from  './../images/Icon material-keyboard-arrow-down.svg';
 // import gotop from './../images/gotop.png';
 // import ad_top from './../images/ad970x90.jpg';
 // import ad_top_m from './../images/ad320x100.jpg';
@@ -238,7 +239,7 @@ function AttractionsIndex() {
             </div>
             
             <div className="more">
-                <a href="##"><img src="images/Icon material-keyboard-arrow-down.svg"/><span>&nbsp;&nbsp;看更多</span></a>
+                <a href="##"><img src={arrow_right} alt=""/><span>&nbsp;&nbsp;看更多</span></a>
             </div>
         </div> 
          <div className="issue_list">
@@ -338,7 +339,7 @@ function AttractionsIndex() {
                 </div>
 
             <div className="more">
-                <a href="##"><img src="images/Icon material-keyboard-arrow-down.svg"/><span>&nbsp;&nbsp;看更多</span></a>
+                <a href="##"><img src={arrow_right} alt=""/><span>&nbsp;&nbsp;看更多</span></a>
             </div>
         </div>
     </div>
