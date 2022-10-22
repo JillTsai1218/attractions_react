@@ -21,41 +21,60 @@ import React, { useState, useEffect } from 'react'
 //  import { Gpt } from 'react-gpt-ads';
 // import { DFPSlotsProvider, AdSlot } from 'react-dfp';
 import './../css/attractions.css';
+const data = require('./../json/attractions.json'); 
 
 
 function AttractionsIndex() {
+    // const [loading, setLoading] = useState('')
+    // const [video, setVideo] = useState('')
 
+   
+//     //多組api fetch
+//   // const urls = ['https://news.tvbs.com.tw/events/freeway/json/attractions.json'];
+//     const getDataFromServer = async () => {
+//         setLoading(true);
+//       const [result1] = await Promise.all(
+//         urls.map((url) => fetch(url).then((res) => res.json()))
+//      );
+//      setLoading(false);
+//       setVideo(result1);
+//      console.log(result1);
+//     };
 
+//         // 模擬componentDidMount
+//         useEffect(() => {
+//             getDataFromServer()
+//         }, [])
 
-
+//console.log(data);
   return (
 <>
 <Jq />
-<div class="child_box"></div>
+<div className="child_box"></div>
 <div id="back"> 
-<div id="back-img1"><img src={arrow_top} alt="top"/><img class="car" src={car} alt="top"/></div>
+<div id="back-img1"><img src={arrow_top} alt="top"/><img className="car" src={car} alt="top"/></div>
 </div>
-<div class="container">
+<div className="container">
 <header>
-    <div class="bg">
-        <div class="logo_box">
-            <div class="logo"><a href="https://news.tvbs.com.tw/" rel="noopener noreferrer" target="_blank"><img src={tvbs_black} alt="logo"/></a></div>
-           <div class="community">
-               <div class="attractions">
+    <div className="bg">
+        <div className="logo_box">
+            <div className="logo"><a href="https://news.tvbs.com.tw/" rel="noopener noreferrer" target="_blank"><img src={tvbs_black} alt="logo"/></a></div>
+           <div className="community">
+               <div className="attractions">
                    <a href="##" >
-                       <div class="live_div">
+                       <div className="live_div">
                            <img src={live} alt="top"/>
                        </div>
                        <span>國道路況</span>
                    </a>
                 </div>    
-               <a class="community_icon" href="https://www.facebook.com/sharer/sharer.php?u=網址"><img src={fb_black} alt="top"/></a>
-               <a class="community_icon"  href="https://social-plugins.line.me/lineit/share?text=標題&url=網址"><img src={line_black} alt="top"/></a>
+               <a className="community_icon" href="https://www.facebook.com/sharer/sharer.php?u=網址"><img src={fb_black} alt="top"/></a>
+               <a className="community_icon"  href="https://social-plugins.line.me/lineit/share?text=標題&url=網址"><img src={line_black} alt="top"/></a>
             </div>  
         </div>     
-        <div class="contxt scroll1">
+        <div className="contxt scroll1">
             
-            <div class="title">
+            <div className="title">
                 <h1>旅遊景點即時影像</h1>
             </div>
             
@@ -66,142 +85,142 @@ function AttractionsIndex() {
 
 <main>
 <article>
-    <div class="map_bg">
-        <div class="video_fix"><div class="frame_box"></div></div>
-            <div class="frame_box need_to_copy">  
-                <div class="freeway_video">
+    <div className="map_bg">
+        <div className="video_fix"><div className="frame_box"></div></div>
+            <div className="frame_box need_to_copy">  
+                <div className="freeway_video">
 
                     <iframe src="https://www.youtube.com/embed/MnODaP-1JaE" frameborder="0"></iframe>
-                        <div class="freeway_video_txt">
-                            <div class="txt_left">
+                        <div className="freeway_video_txt">
+                            <div className="txt_left">
                                 <h2>陽明山擎天崗</h2>
                             </div>
-                            <div class="source">
+                            <div className="source">
                                 <span>影像來源：陽明山國家公園</span>
                             </div>
                         </div>
                 </div>
             </div>
-    <div class="attractions_area">
-        <div class="frame_box3">
-            <div class="choose_area">
-                <div class="triangle">
-                    <div class="triangle_img">
+    <div className="attractions_area">
+        <div className="frame_box3">
+            <div className="choose_area">
+                <div className="triangle">
+                    <div className="triangle_img">
                             <p>更多景點影像</p>
                             <img src="images/location_icon.svg" alt=""/>
                     </div>
-                    <div class="location_img">
+                    <div className="location_img">
                     </div>
                 </div>
-                <div class="attractions_pc">
+                <div className="attractions_pc">
                 <ul>
-                    <li class="attractions_box">
+                    <li className="attractions_box">
                         <a href="##">
-                            <div class="attractions_img">
+                            <div className="attractions_img">
                                 <img src="./../images/武陵－京華吊橋櫻花林.jpg" alt="attractions"/>
                             </div>
                             
                         </a>
-                        <div class="attractions_txt">
+                        <div className="attractions_txt">
                             <h2 >武陵 - 京華吊橋櫻花林</h2>
                         </div>
                     </li>
-                    <li class="attractions_box active">
+                    <li className="attractions_box active">
                         <a href="##">
-                            <div class="attractions_img">
+                            <div className="attractions_img">
                                 <img src="./../images/陽明山－擎天崗草原.jpg" alt="attractions"/>
                             </div>
                             
                         </a>
-                        <div class="attractions_txt">
+                        <div className="attractions_txt">
                             <h2 >陽明山 - 擎天崗草原</h2>
                         </div>
                     </li>
-                    <li class="attractions_box">
+                    <li className="attractions_box">
                         <a href="##">
-                            <div class="attractions_img">
+                            <div className="attractions_img">
                                 <img src="images/陽明山－遠眺七星山.jpg"/>
                             </div>
                             
                         </a>
-                        <div class="attractions_txt">
+                        <div className="attractions_txt">
                             <h2 >陽明山 - 遠眺七星山</h2>
                         </div>
                     </li>
-                    <li class="attractions_box">
+                    <li className="attractions_box">
                         <a href="##">
-                            <div class="attractions_img">
+                            <div className="attractions_img">
                                 <img src="images/阿里山－二延平步道.jpg"/>
                             </div>
                             
                         </a>
-                        <div class="attractions_txt">
+                        <div className="attractions_txt">
                             <h2 >阿里山 - 二延平步道</h2>
                         </div>
                     </li>
-                    <li class="attractions_box">
+                    <li className="attractions_box">
                         <a href="##">
-                            <div class="attractions_img">
+                            <div className="attractions_img">
                                 <img src="images/阿里山－太平雲梯.jpg"/>
                             </div>
                             
                         </a>
-                        <div class="attractions_txt">
+                        <div className="attractions_txt">
                             <h2 >阿里山 - 太平雲梯</h2>
                         </div>
                     </li>
-                    <li class="attractions_box">
+                    <li className="attractions_box">
                         <a href="##">
-                            <div class="attractions_img">
+                            <div className="attractions_img">
                                 <img src="images/阿里山－牛埔仔大草原.jpg"/>
                             </div>
                             
                         </a>
-                        <div class="attractions_txt">
+                        <div className="attractions_txt">
                             <h2 >阿里山 - 牛埔仔大草原</h2>
                         </div>
                     </li>
-                    <li class="attractions_box">
+                    <li className="attractions_box">
                         <a href="##">
-                            <div class="attractions_img">
+                            <div className="attractions_img">
                                 <img src="images/雪霸國家公園－雪見遊憩區.jpg"/>
                             </div>
                             
                         </a>
-                        <div class="attractions_txt">
+                        <div className="attractions_txt">
                             <h2 >雪霸國家公園 - 雪見遊憩區</h2>
                         </div>
                     </li>
-                    <li class="attractions_box">
+                    <li className="attractions_box">
                         <a href="##">
-                            <div class="attractions_img">
+                            <div className="attractions_img">
                                 <img src="images/雪霸國家公園－觀霧遊憩區.jpg"/>
                             </div>
                             
                         </a>
-                        <div class="attractions_txt">
+                        <div className="attractions_txt">
                             <h2 >雪霸國家公園 - 觀霧遊憩區</h2>
                         </div>
                     </li>
-                    <li class="attractions_box">
+                    <li className="attractions_box">
                         <a href="##">
-                            <div class="attractions_img">
+                            <div className="attractions_img">
                                 <img src="images/福壽山農場－天池景觀步道.jpg"/>
                             </div>
                             
                         </a>
-                        <div class="attractions_txt">
+                        <div className="attractions_txt">
                             <h2 >福壽山農場 - 天池景觀步道</h2>
                         </div>
                     </li>
-                    <li class="attractions_box">
+                    <li className="attractions_box">
                         <a href="##">
-                            <div class="attractions_img">
+                            <div className="attractions_img">
                                 <img src="images/福壽山農場－鴛鴦湖步道.jpg"/>
                             </div>
                             
                         </a>
-                        <div class="attractions_txt">
+                        <div className="attractions_txt">
                             <h2 >福壽山農場 - 鴛鴦湖步道</h2>
                         </div>
                     </li>
@@ -216,39 +235,25 @@ function AttractionsIndex() {
 
         
     </div>
-    <div class="issue_area">
-        <div class="frame_box2">
-        <div class="suggest_title"><p>推薦給您</p></div>
-        <div class="issue_list">
-            <div class="issue_title"><p>車壇報好康</p></div>
+    <div className="issue_area">
+        <div className="frame_box2">
+        <div className="suggest_title"><p>推薦給您</p></div>
+        <div className="issue_list">
+            <div className="issue_title"><p>車壇報好康</p></div>
 
-            <div class="issue_news">
-            <div class="list">
+            <div className="issue_news">
+            <div className="list">
                 <ul>
                     <li>
                         <a href="#">				
-                        <div class="box">
-                        <div class="img">
-                        <div class="list_play"></div>
-                        <div class="overlay-color"></div><img src="images/20201106102127-3498d9ee.jpg"/>
+                        <div className="box">
+                        <div className="img">
+                        <div className="list_play"></div>
+                        <div className="overlay-color"></div><img src="images/20201106102127-3498d9ee.jpg"/>
                         </div>
-                        <div class="txt_box">
-                            <h3 class="txt">秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響</h3>
-                            <div class="time">1 分鐘前</div>
-                        </div>
-                        </div>
-                        </a>
-                    </li>
-        
-                    <li>
-                        <a href="#">
-                        <div class="box">
-                        <div class="img">
-                        <div class="overlay-color"></div><img src="images/20201106102127-3498d9ee.jpg"/>
-                        </div>
-                        <div class="txt_box">
-                            <h3 class="txt">秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大　陳吉仲籲莫用毒豬一句話影響</h3>
-                            <div class="time">1 分鐘前</div>
+                        <div className="txt_box">
+                            <h3 className="txt">秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響</h3>
+                            <div className="time">1 分鐘前</div>
                         </div>
                         </div>
                         </a>
@@ -256,13 +261,27 @@ function AttractionsIndex() {
         
                     <li>
                         <a href="#">
-                        <div class="box">
-                        <div class="img">
-                        <div class="overlay-color"></div><img src="images/20201106102127-3498d9ee.jpg"/>
+                        <div className="box">
+                        <div className="img">
+                        <div className="overlay-color"></div><img src="images/20201106102127-3498d9ee.jpg"/>
                         </div>
-                        <div class="txt_box">
-                            <h3 class="txt">秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響</h3>                        
-                            <div class="time">1 分鐘前</div>
+                        <div className="txt_box">
+                            <h3 className="txt">秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大　陳吉仲籲莫用毒豬一句話影響</h3>
+                            <div className="time">1 分鐘前</div>
+                        </div>
+                        </div>
+                        </a>
+                    </li>
+        
+                    <li>
+                        <a href="#">
+                        <div className="box">
+                        <div className="img">
+                        <div className="overlay-color"></div><img src="images/20201106102127-3498d9ee.jpg"/>
+                        </div>
+                        <div className="txt_box">
+                            <h3 className="txt">秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響</h3>                        
+                            <div className="time">1 分鐘前</div>
                         </div>
                         </div>
                         </a>
@@ -270,28 +289,14 @@ function AttractionsIndex() {
 
                     <li>
                         <a href="#">				
-                        <div class="box">
-                        <div class="img">
-                        <div class="list_play"></div>
-                        <div class="overlay-color"></div><img src="images/20201106102127-3498d9ee.jpg"/>
+                        <div className="box">
+                        <div className="img">
+                        <div className="list_play"></div>
+                        <div className="overlay-color"></div><img src="images/20201106102127-3498d9ee.jpg"/>
                         </div>
-                        <div class="txt_box">
-                            <h3 class="txt">秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響</h3>
-                            <div class="time">1 分鐘前</div>
-                        </div>
-                        </div>
-                        </a>
-                    </li>
-        
-                    <li>
-                        <a href="#">
-                        <div class="box">
-                        <div class="img">
-                        <div class="overlay-color"></div><img src="images/20201106102127-3498d9ee.jpg"/>
-                        </div>
-                        <div class="txt_box">
-                            <h3 class="txt">秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大　陳吉仲籲莫用毒豬一句話影響</h3>
-                            <div class="time">1 分鐘前</div>
+                        <div className="txt_box">
+                            <h3 className="txt">秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響</h3>
+                            <div className="time">1 分鐘前</div>
                         </div>
                         </div>
                         </a>
@@ -299,13 +304,27 @@ function AttractionsIndex() {
         
                     <li>
                         <a href="#">
-                        <div class="box">
-                        <div class="img">
-                        <div class="overlay-color"></div><img src="images/20201106102127-3498d9ee.jpg"/>
+                        <div className="box">
+                        <div className="img">
+                        <div className="overlay-color"></div><img src="images/20201106102127-3498d9ee.jpg"/>
                         </div>
-                        <div class="txt_box">
-                            <h3 class="txt">秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響</h3>                        
-                            <div class="time">1 分鐘前</div>
+                        <div className="txt_box">
+                            <h3 className="txt">秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大　陳吉仲籲莫用毒豬一句話影響</h3>
+                            <div className="time">1 分鐘前</div>
+                        </div>
+                        </div>
+                        </a>
+                    </li>
+        
+                    <li>
+                        <a href="#">
+                        <div className="box">
+                        <div className="img">
+                        <div className="overlay-color"></div><img src="images/20201106102127-3498d9ee.jpg"/>
+                        </div>
+                        <div className="txt_box">
+                            <h3 className="txt">秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響</h3>                        
+                            <div className="time">1 分鐘前</div>
                         </div>
                         </div>
                         </a>
@@ -315,40 +334,26 @@ function AttractionsIndex() {
             </div>	
             </div>
             
-            <div class="more">
+            <div className="more">
                 <a href="##"><img src="images/Icon material-keyboard-arrow-down.svg"/><span>&nbsp;&nbsp;看更多</span></a>
             </div>
         </div> 
-         <div class="issue_list">
-            <div class="issue_title"><p>電動車新紀元</p></div>
+         <div className="issue_list">
+            <div className="issue_title"><p>電動車新紀元</p></div>
 
-            <div class="issue_news">
-                <div class="list">
+            <div className="issue_news">
+                <div className="list">
                     <ul>
                         <li>
                             <a href="#">				
-                            <div class="box">
-                            <div class="img">
-                            <div class="list_play"></div>
-                            <div class="overlay-color"></div><img src="images/20201106102127-3498d9ee.jpg"/>
+                            <div className="box">
+                            <div className="img">
+                            <div className="list_play"></div>
+                            <div className="overlay-color"></div><img src="images/20201106102127-3498d9ee.jpg"/>
                             </div>
-                            <div class="txt_box">
-                                <h3 class="txt">秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響</h3>
-                                <div class="time">1 分鐘前</div>
-                            </div>
-                            </div>
-                            </a>
-                        </li>
-            
-                        <li>
-                            <a href="#">
-                            <div class="box">
-                            <div class="img">
-                            <div class="overlay-color"></div><img src="images/20201106102127-3498d9ee.jpg"/>
-                            </div>
-                            <div class="txt_box">
-                                <h3 class="txt">秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大　陳吉仲籲莫用毒豬一句話影響</h3>
-                                <div class="time">1 分鐘前</div>
+                            <div className="txt_box">
+                                <h3 className="txt">秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響</h3>
+                                <div className="time">1 分鐘前</div>
                             </div>
                             </div>
                             </a>
@@ -356,13 +361,27 @@ function AttractionsIndex() {
             
                         <li>
                             <a href="#">
-                            <div class="box">
-                            <div class="img">
-                            <div class="overlay-color"></div><img src="images/20201106102127-3498d9ee.jpg"/>
+                            <div className="box">
+                            <div className="img">
+                            <div className="overlay-color"></div><img src="images/20201106102127-3498d9ee.jpg"/>
                             </div>
-                            <div class="txt_box">
-                                <h3 class="txt">秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響</h3>                        
-                                <div class="time">1 分鐘前</div>
+                            <div className="txt_box">
+                                <h3 className="txt">秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大　陳吉仲籲莫用毒豬一句話影響</h3>
+                                <div className="time">1 分鐘前</div>
+                            </div>
+                            </div>
+                            </a>
+                        </li>
+            
+                        <li>
+                            <a href="#">
+                            <div className="box">
+                            <div className="img">
+                            <div className="overlay-color"></div><img src="images/20201106102127-3498d9ee.jpg"/>
+                            </div>
+                            <div className="txt_box">
+                                <h3 className="txt">秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響</h3>                        
+                                <div className="time">1 分鐘前</div>
                             </div>
                             </div>
                             </a>
@@ -370,28 +389,14 @@ function AttractionsIndex() {
     
                         <li>
                             <a href="#">				
-                            <div class="box">
-                            <div class="img">
-                            <div class="list_play"></div>
-                            <div class="overlay-color"></div><img src="images/20201106102127-3498d9ee.jpg"/>
+                            <div className="box">
+                            <div className="img">
+                            <div className="list_play"></div>
+                            <div className="overlay-color"></div><img src="images/20201106102127-3498d9ee.jpg"/>
                             </div>
-                            <div class="txt_box">
-                                <h3 class="txt">秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響</h3>
-                                <div class="time">1 分鐘前</div>
-                            </div>
-                            </div>
-                            </a>
-                        </li>
-            
-                        <li>
-                            <a href="#">
-                            <div class="box">
-                            <div class="img">
-                            <div class="overlay-color"></div><img src="images/20201106102127-3498d9ee.jpg"/>
-                            </div>
-                            <div class="txt_box">
-                                <h3 class="txt">秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大　陳吉仲籲莫用毒豬一句話影響</h3>
-                                <div class="time">1 分鐘前</div>
+                            <div className="txt_box">
+                                <h3 className="txt">秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響</h3>
+                                <div className="time">1 分鐘前</div>
                             </div>
                             </div>
                             </a>
@@ -399,13 +404,27 @@ function AttractionsIndex() {
             
                         <li>
                             <a href="#">
-                            <div class="box">
-                            <div class="img">
-                            <div class="overlay-color"></div><img src="images/20201106102127-3498d9ee.jpg"/>
+                            <div className="box">
+                            <div className="img">
+                            <div className="overlay-color"></div><img src="images/20201106102127-3498d9ee.jpg"/>
                             </div>
-                            <div class="txt_box">
-                                <h3 class="txt">秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響</h3>                        
-                                <div class="time">1 分鐘前</div>
+                            <div className="txt_box">
+                                <h3 className="txt">秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響秋鬥反萊豬聲量大　陳吉仲籲莫用毒豬一句話影響</h3>
+                                <div className="time">1 分鐘前</div>
+                            </div>
+                            </div>
+                            </a>
+                        </li>
+            
+                        <li>
+                            <a href="#">
+                            <div className="box">
+                            <div className="img">
+                            <div className="overlay-color"></div><img src="images/20201106102127-3498d9ee.jpg"/>
+                            </div>
+                            <div className="txt_box">
+                                <h3 className="txt">秋鬥反萊豬聲量大陳吉仲籲莫用毒豬一句話影響</h3>                        
+                                <div className="time">1 分鐘前</div>
                             </div>
                             </div>
                             </a>
@@ -415,7 +434,7 @@ function AttractionsIndex() {
                 </div>	
                 </div>
 
-            <div class="more">
+            <div className="more">
                 <a href="##"><img src="images/Icon material-keyboard-arrow-down.svg"/><span>&nbsp;&nbsp;看更多</span></a>
             </div>
         </div>
@@ -424,10 +443,10 @@ function AttractionsIndex() {
 </article>
 </main>
 <footer>
-    <div class="frame_box">
-        <div class="community"> 
-            <a class="community_icon" href="https://www.facebook.com/sharer/sharer.php?u=網址"><img src={fb_black} alt="top"/></a>
-            <a class="community_icon"  href="https://social-plugins.line.me/lineit/share?text=標題&url=網址"><img src={line_black} alt="top"/></a>
+    <div className="frame_box">
+        <div className="community"> 
+            <a className="community_icon" href="https://www.facebook.com/sharer/sharer.php?u=網址"><img src={fb_black} alt="top"/></a>
+            <a className="community_icon"  href="https://social-plugins.line.me/lineit/share?text=標題&url=網址"><img src={line_black} alt="top"/></a>
          </div>  
 
         <h6> © TVBS Media Inc. All Rights Reserved.<br/>台北市內湖區瑞光路451號 | 聯利媒體股份有限公司 </h6>
