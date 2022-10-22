@@ -1,5 +1,6 @@
 import React from "react";
 import $ from 'jquery';
+const all_data = require('./../json/attractions.json'); 
 export default class Jq  extends React.Component {
     componentDidMount(){      
 $(function() {  
@@ -115,6 +116,26 @@ function cycle(){
 setInterval(cycle, 500 );
     
     });
+
+
+  //click景點
+  $(".choose_area .attractions_box").each(function(e){
+    $(this).click(function(){
+      //處理選取active
+      $(".attractions_pc ul li").removeClass("active"); 
+      $(".attractions_pc ul li:nth-child("+(e+1)+")").addClass("active"); 
+      //寫入 localStorage
+      localStorage.setItem("attractions_video", all_data.freeway_video[e]);
+      localStorage.setItem("attractions_title", all_data.freeway_title[e]);
+      localStorage.setItem("attractions_source", all_data.freeway_source[e]);
+      localStorage.setItem("attractions_index", e);
+      var all='<iframe src="'+all_data.freeway_video[e]+'" frameborder="0"></iframe><div class="freeway_video_txt"><div class="txt_left"><h2>'+all_data.freeway_title[e]+'</h2></div><div class="source"><span>影像來源：'+all_data.freeway_source[e]+'</span></div></div></div>';
+      $(".freeway_video").html(all);   
+    });
+});
+
+
+
 }
 render(){return (
 <div className="myjs">
