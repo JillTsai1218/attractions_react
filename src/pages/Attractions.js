@@ -46,7 +46,7 @@ function AttractionsIndex() {
 //             getDataFromServer()
 //         }, [])
 
-//console.log(data);
+//console.log(data.freeway_title[0]);
   return (
 <>
 <Jq />
@@ -114,116 +114,19 @@ function AttractionsIndex() {
                 </div>
                 <div className="attractions_pc">
                 <ul>
-                    <li className="attractions_box">
+                    {Array.from(data.freeway_title).map((item, index) => (
+                                        <li className="attractions_box">
                         <a href="##">
                             <div className="attractions_img">
-                                <img src="./../images/武陵－京華吊橋櫻花林.jpg" alt="attractions"/>
+                                <img src={`https://news.tvbs.com.tw/events/freeway/images/`+item+`.jpg?v=_prd`} alt="attractions"/>
                             </div>
                             
                         </a>
                         <div className="attractions_txt">
-                            <h2 >武陵 - 京華吊橋櫻花林</h2>
+                            <h2 >{item}</h2>
                         </div>
                     </li>
-                    <li className="attractions_box active">
-                        <a href="##">
-                            <div className="attractions_img">
-                                <img src="./../images/陽明山－擎天崗草原.jpg" alt="attractions"/>
-                            </div>
-                            
-                        </a>
-                        <div className="attractions_txt">
-                            <h2 >陽明山 - 擎天崗草原</h2>
-                        </div>
-                    </li>
-                    <li className="attractions_box">
-                        <a href="##">
-                            <div className="attractions_img">
-                                <img src="images/陽明山－遠眺七星山.jpg"/>
-                            </div>
-                            
-                        </a>
-                        <div className="attractions_txt">
-                            <h2 >陽明山 - 遠眺七星山</h2>
-                        </div>
-                    </li>
-                    <li className="attractions_box">
-                        <a href="##">
-                            <div className="attractions_img">
-                                <img src="images/阿里山－二延平步道.jpg"/>
-                            </div>
-                            
-                        </a>
-                        <div className="attractions_txt">
-                            <h2 >阿里山 - 二延平步道</h2>
-                        </div>
-                    </li>
-                    <li className="attractions_box">
-                        <a href="##">
-                            <div className="attractions_img">
-                                <img src="images/阿里山－太平雲梯.jpg"/>
-                            </div>
-                            
-                        </a>
-                        <div className="attractions_txt">
-                            <h2 >阿里山 - 太平雲梯</h2>
-                        </div>
-                    </li>
-                    <li className="attractions_box">
-                        <a href="##">
-                            <div className="attractions_img">
-                                <img src="images/阿里山－牛埔仔大草原.jpg"/>
-                            </div>
-                            
-                        </a>
-                        <div className="attractions_txt">
-                            <h2 >阿里山 - 牛埔仔大草原</h2>
-                        </div>
-                    </li>
-                    <li className="attractions_box">
-                        <a href="##">
-                            <div className="attractions_img">
-                                <img src="images/雪霸國家公園－雪見遊憩區.jpg"/>
-                            </div>
-                            
-                        </a>
-                        <div className="attractions_txt">
-                            <h2 >雪霸國家公園 - 雪見遊憩區</h2>
-                        </div>
-                    </li>
-                    <li className="attractions_box">
-                        <a href="##">
-                            <div className="attractions_img">
-                                <img src="images/雪霸國家公園－觀霧遊憩區.jpg"/>
-                            </div>
-                            
-                        </a>
-                        <div className="attractions_txt">
-                            <h2 >雪霸國家公園 - 觀霧遊憩區</h2>
-                        </div>
-                    </li>
-                    <li className="attractions_box">
-                        <a href="##">
-                            <div className="attractions_img">
-                                <img src="images/福壽山農場－天池景觀步道.jpg"/>
-                            </div>
-                            
-                        </a>
-                        <div className="attractions_txt">
-                            <h2 >福壽山農場 - 天池景觀步道</h2>
-                        </div>
-                    </li>
-                    <li className="attractions_box">
-                        <a href="##">
-                            <div className="attractions_img">
-                                <img src="images/福壽山農場－鴛鴦湖步道.jpg"/>
-                            </div>
-                            
-                        </a>
-                        <div className="attractions_txt">
-                            <h2 >福壽山農場 - 鴛鴦湖步道</h2>
-                        </div>
-                    </li>
+                    ))}
                 </ul>
                 </div>
 
